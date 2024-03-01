@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+}
+main {
+    background-color: #4c3435;
+    /* background-color: #61b348; */
+    /* background-color: #eeeeee; */
+    /* color: #373737; */
+}
