@@ -54,6 +54,8 @@ document.querySelector(".attempsOut").innerText = `Attempts: ${attempt}`;
 
 hintTxt.innerText = "Start guessing...";
 
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+
 function reastartGame() {
     score = 0;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -68,19 +70,25 @@ function reastartGame() {
     attempsOutput.innerText = `Attempts: ${attempt}`;
 }
 const checkNumber = () => {
-    if (mainH1.textContent === "You win!") {
-        reastartGame();
+    if (mainH1.textContent === "You lose!") {
         return
     }
+    if (mainH1.textContent === "You win!") {
+        return
+    }
+    // if (secretNumber < 0) {}
+    // if (secretNumber > 20) {}
     attempts++;
     attempt--;
     attempsOutput.innerText = `Attempts: ${attempt}`;
     if (attempts < 20) {
-        let secretNumber = Math.trunc(Math.random() * 20) + 1;
-        misteryBox.innerText = secretNumber;
         num = Number(guesInput.value);
-
+        if (num > secretNumber) {hintTxt.innerText = "Too high";}
+        if (num < secretNumber) {hintTxt.innerText = "Too low";}
+        // let secretNumber = Math.trunc(Math.random() * 20) + 1;
+        // misteryBox.innerText = secretNumber;
         if (num === secretNumber) {
+            misteryBox.innerText = secretNumber;
             hintTxt.innerText = "Correct Number!";
             document.querySelector("main").style.backgroundColor = "green";
             mainH1.innerText = `You win!`
@@ -88,10 +96,7 @@ const checkNumber = () => {
         }
     }
     else {
-        if (mainH1.textContent === "You lose!") {
-            reastartGame();
-            return
-        }
+        misteryBox.innerText = secretNumber;
         document.querySelector("main").style.backgroundColor = "red";
         mainH1.innerText = `You lose!`
     }
