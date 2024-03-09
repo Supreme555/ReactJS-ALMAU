@@ -1,5 +1,6 @@
 // Task 1
 const populations = [100, 200, 300, 400];
+let mas = [];
 console.log(populations.length === 4);
 
 const percentages = populations.map(percentageOfWorld1);

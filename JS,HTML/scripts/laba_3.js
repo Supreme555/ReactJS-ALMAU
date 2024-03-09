@@ -10,7 +10,11 @@ const country3 = describeCountry('Japan', 126, 'Tokyo');
 console.log(country1);
 console.log(country2);
 console.log(country3);
-
+const Fun = () => {}
+function fun () {}
+const apple = function () {
+  return 'apple';
+}
 //Task 2
 function percentageOfWorld1(population) {
   return (population / 7900) * 100;

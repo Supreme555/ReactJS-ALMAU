@@ -1,13 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
-    font-family: sans-serif;
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     margin: 0;
+    height: 100vh;
+
 }
 main {
+    width: 100%;
+    height: 100%;
     background-color: #4c3435;
     /* background-color: #61b348; */
     /* background-color: #eeeeee; */
+    color: #eeeeee;
     /* color: #373737; */
+}
+.container {
+    padding: 15px 20px;
+}
+.mistery_box {
+    background-color: #eeeeee;
+    color: black;
+    font-size: 100px;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    background-color: #eeeeee;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 1px;
+}
+.main_f_3_line {
+    height: 3px;
+    background-color: #eeeeee;
+    width: 100%;
+}
+.main_f_1 {
+    display: flex;
+    justify-content: space-between;
+}
+.main_f_2 {
+    margin-top: 50px;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+}
+.main_f_3 {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+.main_f_4 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.main_f_4_f_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.guess {
+    margin-bottom: 40px;
+    height: 80px;
+    border: none;
+    font-size: 20px;
+    border: 2px solid #eeeeee;
+    background-color: #4c3435;
+    padding: 10px 20px;
+    color: #eeeeee;
+    outline: none;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+  
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.main_f_4_f_1 button {
+    width: 80%;
+}
+.main_f_4_f_2 {
+    font-size: 25px;
+}
+p {
+    margin-bottom: 10px;
 }
