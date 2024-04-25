@@ -8,7 +8,7 @@ import ItemAddForm from "../item-add-form";
 import './app.css';
 
 export  default  class  App extends Component {
-
+// получает все методы и свойства класса 
     maxId = 100;
 
     state = {
@@ -32,12 +32,11 @@ export  default  class  App extends Component {
     deleteItem = (id) => {
         this.setState(({todoData} ) => {
             const idx = todoData.findIndex((element) => element.id === id);
-            // console.log(idx);
+            console.log(idx);
                 const newArray = [
                 ...todoData.slice(0, idx),
                 ...todoData.slice(idx +1)
             ];
-
             return{
                 todoData: newArray
             };

@@ -9,6 +9,7 @@ export default class SearchPanel extends Component {
 
     onSearchChange = (e) => {
         const term = e.target.value;
+        // ссылается на элемент, который инициировал событие изменения
         this.setState({term});
         this.props.onSearchChange(term);
     };
